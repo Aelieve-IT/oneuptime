@@ -1,10 +1,10 @@
 global:
-  storageClass: 
+  storageClass: freenas-nfs-csi
   clusterDomain: &global-cluster-domain cluster.local
 
 
 # Please change this to the domain name / IP where OneUptime server is hosted on. 
-host: localhost
+host: oneuptime.aelieve.app
 httpProtocol: http
 
 # (Optional): You usually do not need to set this if you're self hosting. 
@@ -26,7 +26,7 @@ metalLb:
 
 ingress:
   service: 
-    type: LoadBalancer
+    type: ClusterIP
     loadBalancerIP: 
 
 postgresql: 
